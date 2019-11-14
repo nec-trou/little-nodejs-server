@@ -19,7 +19,6 @@ function _handler(req, res) {
     });
     req.on('end', () => {
       const writeStream = fs.createWriteStream(contentPath);
-      console.log(body);
       body = qs.parse(body);
       writeStream.write(body.content, 'utf8');
       writeStream
