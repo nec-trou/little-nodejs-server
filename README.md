@@ -1,0 +1,1 @@
+To launch a server run `node app.js` in terminal and open http://localhost:8080 in browser.
