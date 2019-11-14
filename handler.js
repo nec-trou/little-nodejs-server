@@ -46,7 +46,6 @@ function _handler(req, res) {
       .on('error', err => {
         res.writeHead(500);
         res.end(`Sorry, it's nothing here. Please, try other path.`);
-        console.log(`Not found ${err}`);
       });
   });
 }
