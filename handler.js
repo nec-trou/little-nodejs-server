@@ -1,16 +1,19 @@
-const fs = require('fs');
+const fs = require("fs");
 
 function _handler(req, res) {
-  fs.readFile('./doc.txt', (err, data) => {
+  const path = req.url.substr(1);
+
+  fs.readFile(path, (err, data) => {
     if (err) {
       res.writeHead(500);
-      res.end(err);
+      console.log(err);
+      res.end(`Sorry, it's nothing here. Please, try other path.`);
       return;
     }
     res.writeHead(200, {
-      'Content-Type': 'text/html; charset=utf-8'
+      "Content-Type": "text/html; charset=utf-8"
     });
-    res.end(`<h3>Hello cruel world!</h3> \n ${req.url} \n ${data}`);
+    res.end(data);
   });
 }
 
