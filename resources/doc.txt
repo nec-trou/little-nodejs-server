@@ -1,2 +1,0 @@
-I am doc.txt, hello!
-Я doc.txt, привет!

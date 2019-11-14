@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 function _handler(req, res) {
-  const path = req.url.substr(1);
+  const path = `./dist/${req.url.substr(1)}`;
 
   fs.readFile(path, (err, data) => {
     if (err) {

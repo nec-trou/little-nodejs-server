@@ -1,0 +1,2 @@
+I am doc.txt inside ./dist/folder/, hello!
+Я doc.txt, привет!
